@@ -1,0 +1,50 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Matem\u00e1ticas",
+    "slug": "matematicas"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "M\u00fasica",
+    "slug": "musica"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 3,
+  "fields": {
+    "title": "F\u00edsica",
+    "slug": "fisica"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 4,
+  "fields": {
+    "title": "Lenguaje",
+    "slug": "lenguaje"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 5,
+  "fields": {
+    "title": "Artes",
+    "slug": "artes"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 6,
+  "fields": {
+    "title": "Ciencias Sociales",
+    "slug": "ciencias-sociales"
+  }
+}
+]
