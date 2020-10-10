@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'students.apps.StudentsConfig',
     'embed_video',
+    'memcache_status',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
+
+# cache
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
