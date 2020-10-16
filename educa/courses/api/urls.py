@@ -10,6 +10,5 @@ router.register('courses', views.CourseViewSet)
 urlpatterns = [
     path('asignaturas/', views.SubjectListView.as_view(), name='subject_list'),
     path('asignaturas/<pk>/', views.SubjectDetailView.as_view(), name='subject_detail'),
-    path('cursos/<pk>/registrarse', views.CourseEnrollView.as_view(), name='course_enroll'),
     path('', include(router.urls)),
 ]
