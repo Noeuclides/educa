@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Log-in{% endblock %}
+{% block title %}Ingresar{% endblock %}
 {% block content %}
 <h1>Log-in</h1>
 <div class="module">
     {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
+    <p>Nombre de usuario incorrecto.</p>
     {% else %}
-    <p>Please, use the following form to log-in:</p>
+    <p>Ingresa con tu nombre de usuario y contraseña:</p>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">

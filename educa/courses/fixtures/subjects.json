@@ -1,5 +1,12 @@
 [
 {
+  "model": "courses.profile",
+  "pk": 1,
+  "fields": {
+    "user": 7
+  }
+},
+{
   "model": "courses.subject",
   "pk": 1,
   "fields": {
@@ -45,6 +52,163 @@
   "fields": {
     "title": "Ciencias Sociales",
     "slug": "ciencias-sociales"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": 1,
+    "subject": 2,
+    "title": "Teor\u00eda Musical I",
+    "slug": "teoria-musical-I",
+    "overview": "Bases de la teor\u00eda musical.\r\nNotas, intervalos y esas cosas...",
+    "created": "2020-10-06T17:18:01.906Z",
+    "students": [
+      3
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "owner": 1,
+    "subject": 1,
+    "title": "\u00c1lgebra lineal",
+    "slug": "algebra-lineal",
+    "overview": "Matrices y toda esa cuesti\u00f3n...",
+    "created": "2020-10-06T17:23:47.784Z",
+    "students": [
+      3
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "owner": 2,
+    "subject": 3,
+    "title": "Campos electromagn\u00e9ticos",
+    "slug": "campos",
+    "overview": "el curso m\u00e1s dificil de todos.",
+    "created": "2020-10-06T21:26:52.032Z",
+    "students": [
+      3
+    ]
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "title": "M\u00f3dulo 1",
+    "description": "",
+    "order": 0
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "title": "M\u00f3dulo 2",
+    "description": "",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "title": "M\u00f3dulo 3",
+    "description": "",
+    "order": 5
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 4,
+  "fields": {
+    "course": 1,
+    "title": "M\u00f3dulo 4",
+    "description": "",
+    "order": 6
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 5,
+  "fields": {
+    "course": 2,
+    "title": "M\u00f3dulo 1",
+    "description": "",
+    "order": 0
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 6,
+  "fields": {
+    "course": 3,
+    "title": "M\u00f3dulo 1",
+    "description": "este es el m\u00f3dulo n\u00famero 1",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 7,
+  "fields": {
+    "course": 3,
+    "title": "Module 2",
+    "description": "este es el Module 2",
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 1,
+  "fields": {
+    "module": 6,
+    "content_type": 10,
+    "object_id": 1,
+    "order": 0
+  }
+},
+{
+  "model": "courses.content",
+  "pk": 2,
+  "fields": {
+    "module": 7,
+    "content_type": 13,
+    "object_id": 1,
+    "order": 0
+  }
+},
+{
+  "model": "courses.image",
+  "pk": 1,
+  "fields": {
+    "owner": 2,
+    "title": "imagen del m\u00f3dulo",
+    "created": "2020-10-09T14:27:16.492Z",
+    "updated": "2020-10-09T14:27:16.492Z",
+    "file": "images/Captura_de_pantalla_2020-10-02_a_las_10.49.48_a._m..png"
+  }
+},
+{
+  "model": "courses.video",
+  "pk": 1,
+  "fields": {
+    "owner": 2,
+    "title": "No comprendo",
+    "created": "2020-10-10T20:11:54.099Z",
+    "updated": "2020-10-10T20:11:54.099Z",
+    "url": "https://www.youtube.com/watch?v=sKvEMSZc0vY&list=TLPQMTAxMDIwMjBfyKvUNqsalg&index=44"
   }
 }
 ]

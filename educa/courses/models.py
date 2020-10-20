@@ -1,9 +1,25 @@
 from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 from django.template.loader import render_to_string
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from .fields import OrderField
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        if self.user.first_name and self.user.last_name:
+            return f'{self.user.first_name} {self.user.last_name}'
+        return self.user.username
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance=None, created=None, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
 
 
 class Subject(models.Model):
