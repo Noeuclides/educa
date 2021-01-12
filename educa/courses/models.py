@@ -16,6 +16,7 @@ class Profile(models.Model):
             return f'{self.user.first_name} {self.user.last_name}'
         return self.user.username
 
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance=None, created=None, **kwargs):
     if created:
@@ -67,6 +68,10 @@ class Module(models.Model):
 
 
 class Content(models.Model):
+    """
+    model that represents the modules' contents,
+    and define a generic relation to associate any kind of content.
+    """
     module = models.ForeignKey(Module,
                                related_name='contents',
                                on_delete=models.CASCADE)
